@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "lib/opmask.h"
 
 #define ROMNAME "rom.bin"
 
@@ -25,6 +26,11 @@ struct CHIP
 
   /* 32 General Purpose registers */
   unsigned short R[32];  
+
+  /* X, Y, Z, Registers */
+  unsigned short RX;
+  unsigned short RY;
+  unsigned short RZ;
 
   /* Flash - Program Memory */
   unsigned short FLASH[0xFFFF];
